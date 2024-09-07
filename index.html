@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="samsclub.png" alt="Sam's Club Logo">
+        <h1>Welcome to Sam's Club</h1>
+    </header>
+
+    <div id="disclaimer">
+        Disclaimer: We sell MOSTLY groceries but we also have Sofas❗❗
+    </div>
+
+    <div id="notepad-sticker">
+        <h3>Weekly Notice</h3>
+        <p>Due to <strong>str4hm</strong> getting a stomach ache because he couldn't handle our chocolate milk due to his <strong>lactose intolerance</strong>, we warn all customers to be careful.</p>
+    </div>
+
+    <div id="category-section">
+        <label for="categories">Select a category:</label>
+        <select id="categories" onchange="showCategory(this.value)">
+            <option value="">-- Select a Category --</option>
+            <option value="furniture">Furniture</option>
+            <option value="fruits">Fruits</option>
+            <option value="snacks">Snacks</option>
+            <option value="frozen-foods">Frozen Foods</option>
+            <option value="poultry">Poultry</option>
+            <option value="misc">Miscellaneous</option>
+            <option value="drinks">Drinks</option>
+        </select>
+    </div>
+
+    <div id="items-container"></div>
+
+    <!-- Modal -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="item-img" src="" alt="">
+            <h3 id="item-name"></h3>
+            <p id="item-description"></p>
+            <p id="item-price"></p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
